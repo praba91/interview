@@ -1,0 +1,10 @@
+.fill-remaining-space{
+	  flex: 1 1 auto;
+
+ text-align: center;
+}
+.logout {
+float:right;
+cursor: pointer;
+text-align: right;
+}

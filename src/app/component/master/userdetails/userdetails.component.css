@@ -1,0 +1,38 @@
+.login-form-flex {
+/*  display: flex;*/
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.fill-remaining-space{
+	  flex: 1 1 auto;
+
+ text-align: center;
+}
+.logout {
+float:right;
+cursor: pointer;
+text-align: right;
+}
+
+.container{
+
+	text-align: center;
+}
+
+.form{
+
+	margin-top: 30px;
+}
+
+.gender{
+	margin-right: 25px;
+}
+
+.back{
+   margin-left: 20px;
+}
+
+mat-form-field{
+    width: 400px;
+}

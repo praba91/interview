@@ -1,0 +1,106 @@
+<div class="container">
+<div class="row">
+	            <mat-card-content>
+
+       <div class="col-lg-12 col-md-12 col-sm-12 " >
+
+		<mat-toolbar color="primary">
+			<label class="fill-remaining-space">User registration</label>
+		</mat-toolbar>
+
+		<form class="example-form"  (ngSubmit)="onSubmit()">
+		<div>	
+	            <mat-form-field class="example-full-width">
+	            <mat-label>First name</mat-label>
+	            <input matInput placeholder="Ex.First name" value=""  autocomplete="off" fxFlex="50"
+	            [formControl]="firstname" required>
+	            <mat-error *ngIf="firstname.invalid">{{getErrorMessageFname()}}</mat-error>
+
+	            </mat-form-field>
+	   </div>
+	    <div>
+	    <mat-form-field class="example-full-width">
+	            <mat-label>Last name</mat-label>
+	            <input matInput placeholder="Ex.Last name" value="" [formControl]="lastname" required autocomplete="off">
+	            <mat-error *ngIf="lastname.invalid">{{getErrorMessageLname()}}</mat-error>
+
+	    </mat-form-field>
+        </div>
+
+        <div class="example-container">
+			  <mat-form-field appearance="fill">
+			    <mat-label>Enter your email</mat-label>
+			    <input matInput placeholder="pat@example.com" [formControl]="email" required>
+			    <mat-error *ngIf="email.invalid">{{getErrorMessageemail()}}</mat-error>
+			  </mat-form-field>
+			</div>
+	    <div>
+        <mat-form-field class="example-full-width">
+	            <mat-label>password</mat-label>
+	            <input matInput placeholder="Ex.password" [formControl]="password"  value="" required autocomplete="off">
+	            <mat-error *ngIf="password.invalid">{{getErrorMessagepassword()}}</mat-error>
+
+	    </mat-form-field>
+	    </div>
+
+	    <div>
+        <mat-form-field class="example-full-width">
+	            <mat-label>Confirm password</mat-label>
+	            <input matInput placeholder="Ex.confirm password" [formControl]="Conpassword"   value="" required autocomplete="off">
+	           <mat-error *ngIf="Conpassword.invalid">{{getErrorMessageconfirmpassword()}}</mat-error>
+
+	    </mat-form-field>
+	    </div>
+
+	   <div>
+	    <mat-form-field class="example-full-width">
+	            <mat-label>Mobile no</mat-label>
+	            <input matInput placeholder="Ex. Mobile no" value="" [formControl]="mobile"  required autocomplete="off">
+	             <mat-error *ngIf="mobile.invalid">{{getErrorMessagemobile()}}</mat-error>
+
+	    </mat-form-field>
+	   </div>
+
+
+    <div>
+    	<div class="gender">
+	            <mat-label>Gerder</mat-label>
+	        </div>
+
+	    <mat-radio-group aria-label="Select an option">
+				  <mat-radio-button value="1">male</mat-radio-button>
+				  <mat-radio-button value="2">female</mat-radio-button>
+		</mat-radio-group>
+        </div>
+    <div>
+		<mat-form-field class="example-full-width">
+		           <mat-label>Address</mat-label>
+		           <textarea matInput placeholder="Ex.Address" autocomplete="off" [formControl]="address" required></textarea>
+		         <mat-error *ngIf="address.invalid">{{getErrorMessageaddress()}}</mat-error>
+
+		</mat-form-field>
+
+
+        </div>
+
+        <div>	
+	           <!--  <mat-form-field class="example-full-width">
+	            <mat-label>Upload file</mat-label>
+	            <input type="file" matInput placeholder="Ex.file" value="" required="" autocomplete="off" >
+	            </mat-form-field> -->
+	   </div>
+           <label>
+		    <button mat-raised-button color="primary">Submit</button>
+		</label>
+		<label>
+		    <button mat-raised-button color="primary" class="back" routerLink="">back</button>
+        </label>
+
+</form>
+    
+    </div>
+
+                   </mat-card-content>
+
+   </div>
+</div>

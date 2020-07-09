@@ -1,0 +1,17 @@
+<form #model="ngForm" (ngSubmit)="onSubmit(model)">
+       <div class="login-page">
+           <div class="form">
+                <input type="text" class="form-control" placeholder="email" id="username" name="username" [(ngModel)]="username" autocomplete="off" />
+                <input type="password" class="form-control" placeholder="password" id="password" name="password" [(ngModel)]="password" autocomplete="off"/>
+              <div> <label> <button>login</button></label></div>
+              
+              <div class="submit">
+              <a href="javascript:void(0);" routerLink="/master/userdetails" routerLinkActive="active">
+                 <button>Signup</button>
+              </a>
+            </div>
+
+                <p class="message">Not registered? <a href="#">Create an account</a></p>
+          </div>
+     </div>
+</form>
